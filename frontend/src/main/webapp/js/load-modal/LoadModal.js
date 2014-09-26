@@ -1,0 +1,1 @@
+angular.module('loadModalApp', ['ui.bootstrap']);

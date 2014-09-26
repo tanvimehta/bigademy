@@ -1,0 +1,52 @@
+.content-main {
+    background-color: #ffffff;
+    font-family: 'Karla', sans-serif;
+    font-size: 17px;
+}
+
+.exercise-section-setting {
+    height: 90%;
+}
+
+.no-space-left {
+    padding-left: 0px;
+}
+
+.problem-side-bar {
+    overflow: scroll !important;
+    height: 96%;
+}
+
+.exercise-side-bar {
+    padding-top: 3px;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.exercise-section-sub-tab-heading {
+    font-size: 12px;
+}
+
+.exercise-panel-body-settings {
+    overflow: auto;
+}
+
+.exercise-section-setting > .problem-side-bar > .panel-group > .panel > .panel-heading {
+    background-color: #5177B5;
+    cursor: pointer;
+    border-radius: 0px;
+    color: #fff;
+
+}
+
+.exercise-section-setting > .problem-side-bar > .panel-group > .panel  {
+    border-radius: 0px;
+    margin: 0px;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.dataset-higlight {
+    background-color: #D4E9C3;
+    padding: 10px;
+}

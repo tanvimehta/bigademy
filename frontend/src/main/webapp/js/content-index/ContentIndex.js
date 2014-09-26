@@ -1,0 +1,1 @@
+angular.module('contentIndexModule', ['ngResource', 'ngRoute', 'ui.bootstrap']);

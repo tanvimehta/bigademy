@@ -1,0 +1,139 @@
+body {
+    background-color: #fff;
+}
+
+.image-row {
+    margin-bottom: 170px;
+}
+
+.centered-image {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-left: -50px;
+    margin-bottom: -220px;
+}
+
+.course-name {
+    font-family: georgia, palatino, 'palatino linotype', times, 'times new roman', serif;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.nav-bar {
+    font-family: georgia, palatino, 'palatino linotype', times, 'times new roman', serif;
+    font-size: 34px;
+}
+
+.nav-bar-col {
+    cursor: pointer;
+    height: 80px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #FF7256;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nav-bar-col:focus, .nav-bar-col:hover {
+    cursor: pointer;
+    height: 80px;
+    background-color: #F9F9F9;
+    color: #FF7256;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.nav-bar-col-selected {
+    height: 80px;
+    border-top: 1px solid #ddd;
+    background-color: #F9F9F9;
+    color: #FF7256;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nav-bar-content {
+    background-color: #F9F9F9;
+}
+
+.side-bar {
+    border-right: 1px solid #ddd;
+}
+
+.course-intro-body {
+    font-weight: 10;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    padding-left: 5%;
+    margin-top: 40px;
+}
+
+.start-button {
+     position: relative;
+     width: 200px;
+     margin-left: -100px;
+     margin-bottom: 30px;
+     height: 40px;
+     left: 50%;
+     font-family: "Andale Mono", AndaleMono, monospace;
+     text-align: center;
+     font-size: 25px;
+     background-color:  #FF7256;
+     color: #fff;
+     border-style:none;
+ }
+
+.start-button:hover, .start-button:focus {
+    background-color:  #EE6A50;
+}
+
+.index-row {
+    margin-top: 30px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.text-setting {
+    font-family: georgia, palatino, 'palatino linotype', times, 'times new roman', serif;;
+    color: #5E2612;
+    font-size: 22px;
+}
+
+.course-intro-panel-header {
+    color: #000 !important;
+    font-size: 22px;
+    font-family: georgia, palatino, 'palatino linotype', times, 'times new roman', serif;;
+}
+
+.tab {
+    padding-left: 30px;
+}
+
+.double-tab {
+    padding-left: 60px;
+}
+
+.triple-tab {
+    padding-left: 120px;
+}
+
+.four-tab {
+    padding-left: 180px;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.italic-text {
+    font-style: italic;
+    font-size: 18px;
+}

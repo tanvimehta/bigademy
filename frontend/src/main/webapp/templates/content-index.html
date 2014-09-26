@@ -1,0 +1,35 @@
+<!-- index widget -->
+<div>
+    <div data-ng-repeat="topic in course.topics">
+        <!-- When there is only one subtopic -->
+        <div data-ng-if="topic.subtopics.length==1">
+            <div class="outermost-box">
+                <div class="headline1"> {{topic.subtopics[0].subtopicName}}</div>
+                <!-- Iterate over all the exercise. -->
+                <div data-ng-repeat="exercise in topic.subtopics[0].exercises">
+                    <div data-ng-click="goToExercisePage(topic.topicId, topic.subtopics[0].subtopicId, exercise.exerciseId)"
+                         class="link-box"> {{exercise.exerciseName}}
+                        <i class="fa fa-angle-right pull-right arrow-font"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- When there are more than one subtopic -->
+        <div data-ng-if="topic.subtopics.length>1">
+            <div class="outermost-box">
+                <!-- Display the topic name -->
+                <div class="headline1"> {{topic.topicName}}</div>
+                <div data-ng-repeat="subtopic in topic.subtopics">
+                    <!-- Display the subtopic name -->
+                    <div class="headline2"> {{subtopic.subtopicName}}</div>
+                    <!-- Iterate over all the exercise. -->
+                    <div data-ng-repeat="exercise in subtopic.exercises">
+                        <div data-ng-click="goToExercisePage(topic.topicId, subtopic.subtopicId, exercise.exerciseId)"
+                             class="link-box"> {{exercise.exerciseName}} <i
+                                class="fa fa-angle-right pull-right arrow-font"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

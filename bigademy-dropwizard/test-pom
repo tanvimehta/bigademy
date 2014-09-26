@@ -1,0 +1,124 @@
+[INFO] com.bigademy:bigademy-dropwizard:jar:1.0-SNAPSHOT
+[INFO] +- com.yammer.dropwizard:dropwizard-migrations:jar:0.6.2:compile
+[INFO] |  +- com.yammer.dropwizard:dropwizard-db:jar:0.6.2:compile
+[INFO] |  |  \- org.apache.tomcat:tomcat-dbcp:jar:7.0.37:compile
+[INFO] |  +- org.liquibase:liquibase-core:jar:2.0.5:compile
+[INFO] |  \- com.mattbertolini:liquibase-slf4j:jar:1.0.0:compile
+[INFO] +- com.yammer.dropwizard:dropwizard-core:jar:0.6.2:compile
+[INFO] |  +- com.sun.jersey:jersey-core:jar:1.17.1:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.17.1:compile
+[INFO] |  |  \- asm:asm:jar:3.1:compile
+[INFO] |  +- com.sun.jersey:jersey-servlet:jar:1.17.1:compile
+[INFO] |  +- com.yammer.metrics:metrics-core:jar:2.2.0:compile
+[INFO] |  +- com.yammer.metrics:metrics-servlet:jar:2.2.0:compile
+[INFO] |  +- com.yammer.metrics:metrics-jetty:jar:2.2.0:compile
+[INFO] |  +- com.yammer.metrics:metrics-logback:jar:2.2.0:compile
+[INFO] |  +- com.yammer.metrics:metrics-jersey:jar:2.2.0:compile
+[INFO] |  |  \- com.yammer.metrics:metrics-annotation:jar:2.2.0:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.1.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.1.4:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.1.4:compile
+[INFO] |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.1.4:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.1.4:compile
+[INFO] |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.1.4:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.1.2:compile
+[INFO] |  +- net.sourceforge.argparse4j:argparse4j:jar:0.4.0:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.4:compile
+[INFO] |  +- org.slf4j:jul-to-slf4j:jar:1.7.4:compile
+[INFO] |  +- ch.qos.logback:logback-core:jar:1.0.10:compile
+[INFO] |  +- ch.qos.logback:logback-classic:jar:1.0.10:compile
+[INFO] |  +- org.slf4j:log4j-over-slf4j:jar:1.7.4:compile
+[INFO] |  +- org.eclipse.jetty:jetty-server:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-continuation:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-servlet:jar:8.1.10.v20130312:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-security:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-http:jar:8.1.10.v20130312:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-io:jar:8.1.10.v20130312:compile
+[INFO] |  |     \- org.eclipse.jetty:jetty-util:jar:8.1.10.v20130312:compile
+[INFO] |  +- com.google.guava:guava:jar:14.0.1:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[INFO] |  +- org.hibernate:hibernate-validator:jar:4.3.1.Final:compile
+[INFO] |  |  \- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  +- joda-time:joda-time:jar:2.2:compile
+[INFO] |  \- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.1.2:compile
+[INFO] +- com.yammer.dropwizard:dropwizard-jdbi:jar:0.6.2:compile
+[INFO] |  +- org.jdbi:jdbi:jar:2.41:compile
+[INFO] |  \- com.yammer.metrics:metrics-jdbi:jar:2.2.0:compile
+[INFO] +- com.yammer.dropwizard:dropwizard-hibernate:jar:0.6.2:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-hibernate4:jar:2.1.2:compile
+[INFO] |  \- org.jadira.usertype:usertype.core:jar:3.0.0.GA:compile
+[INFO] |     \- org.jadira.usertype:usertype.spi:jar:3.0.0.GA:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.28:compile
+[INFO] +- org.hibernate:hibernate-core:jar:4.1.9.Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.1.0.GA:compile
+[INFO] |  +- org.javassist:javassist:jar:3.17.1-GA:compile
+[INFO] |  +- org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:jar:1.0.0.Final:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  +- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final:compile
+[INFO] |  \- org.hibernate.common:hibernate-commons-annotations:jar:4.0.1.Final:compile
+[INFO] +- org.apache.hadoop:hadoop-core:jar:0.20.2-CDH3B4:compile
+[INFO] |  +- com.cloudera.cdh:hadoop-ant:pom:3.0-beta-4:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.4:compile
+[INFO] |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  +- org.mortbay.jetty:jetty:jar:6.1.26:compile
+[INFO] |  |  \- org.mortbay.jetty:servlet-api:jar:2.5-20081211:compile
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- tomcat:jasper-runtime:jar:5.5.23:compile
+[INFO] |  +- tomcat:jasper-compiler:jar:5.5.23:compile
+[INFO] |  |  +- javax.servlet:jsp-api:jar:2.0:compile
+[INFO] |  |  \- ant:ant:jar:1.6.5:compile
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.5.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.5.2:compile
+[INFO] |  +- javax.servlet.jsp:jsp-api:jar:2.1:compile
+[INFO] |  +- commons-el:commons-el:jar:1.0:compile
+[INFO] |  +- net.java.dev.jets3t:jets3t:jar:0.6.1:compile
+[INFO] |  +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  +- hsqldb:hsqldb:jar:1.8.0.7:compile
+[INFO] |  +- oro:oro:jar:2.0.8:compile
+[INFO] |  \- org.eclipse.jdt:core:jar:3.1.1:compile
+[INFO] +- org.apache.pig:pig:jar:0.8.1-cdh3u3:compile
+[INFO] |  +- com.cloudera.cdh:pig-ant:pom:0.8.1-cdh3u3:compile
+[INFO] |  +- org.apache.hbase:hbase:jar:0.90.4-cdh3u3:compile
+[INFO] |  |  +- org.apache.avro:avro-ipc:jar:1.5.4:compile
+[INFO] |  |  |  +- org.jboss.netty:netty:jar:3.2.4.Final:compile
+[INFO] |  |  |  \- org.apache.velocity:velocity:jar:1.7:compile
+[INFO] |  |  |     \- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.3.4-cdh3u3:compile
+[INFO] |  |  |  \- com.cloudera.cdh:zookeeper-ant:pom:3.3.4-cdh3u3:compile
+[INFO] |  |  +- org.apache.thrift:thrift:jar:0.2.0:compile
+[INFO] |  |  +- org.jruby:jruby-complete:jar:1.6.0:compile
+[INFO] |  |  +- org.jamon:jamon-runtime:jar:2.3.1:compile
+[INFO] |  |  +- com.google.protobuf:protobuf-java:jar:2.3.0:compile
+[INFO] |  |  +- com.sun.jersey:jersey-json:jar:1.4:compile
+[INFO] |  |  |  +- org.codehaus.jettison:jettison:jar:1.1:compile
+[INFO] |  |  |  +- com.sun.xml.bind:jaxb-impl:jar:2.1.12:compile
+[INFO] |  |  |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.5.5:compile
+[INFO] |  |  |  \- org.codehaus.jackson:jackson-xc:jar:1.5.5:compile
+[INFO] |  |  +- javax.ws.rs:jsr311-api:jar:1.1.1:compile
+[INFO] |  |  +- javax.xml.bind:jaxb-api:jar:2.1:compile
+[INFO] |  |  |  \- javax.activation:activation:jar:1.1:compile
+[INFO] |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  +- org.apache.hbase:hbase:jar:tests:0.90.4-cdh3u3:compile
+[INFO] |  +- org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:jsp-2.1:jar:6.1.14:compile
+[INFO] |  +- org.python:jython:jar:2.5.0:compile
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile
+[INFO] |  +- net.sf.kosmosfs:kfs:jar:0.3:compile
+[INFO] |  +- org.apache.avro:avro:jar:1.5.4:compile
+[INFO] |  |  +- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  \- org.xerial.snappy:snappy-java:jar:1.0.3.2:compile
+[INFO] |  +- com.jcraft:jsch:jar:0.1.38:compile
+[INFO] |  +- jline:jline:jar:0.9.94:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- log4j:log4j:jar:1.2.16:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.5.8:compile
+[INFO] |  \- com.cloudera.cdh:hadoop-root:pom:3.0-u3:compile
+[INFO] +- org.apache.pig:pigunit:jar:0.8.1-cdh3u2:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.0.4:compile
+[INFO] +- junit:junit:jar:4.8.1:compile
+[INFO] \- commons-io:commons-io:jar:2.4:compile

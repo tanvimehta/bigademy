@@ -1,0 +1,74 @@
+.explanation-header {
+    padding-top: 10px;
+    font-family: 'Roboto Slab', ff-tisa-web-pro, Georgia, Arial, sans-serif;
+    font-size: 26px;
+    /*color: #C76114;*/
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 23px;
+}
+
+.explanation-section-settings {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    height: 90%;
+    font-family: Lato, proxima-nova, 'Helvetica Neue', Arial, sans-serif;
+    overflow: scroll;
+    color: #404040;
+}
+
+.example-panel-header {
+
+    background-color: #2980B9 !important;
+    /*opacity: 0.8;*/
+    color: #fff !important;
+}
+
+.tab {
+    padding-left: 30px;
+}
+
+.double-tab {
+    padding-left: 60px;
+}
+
+.triple-tab {
+    padding-left: 120px;
+}
+
+.four-tab {
+    padding-left: 180px;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.italic-text {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.grey-highlight {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.green-highlight {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background-color: #DFF0D8;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html data-ng-app="courseApp">
+<head>
+    <!-- Style sheet -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <link href="css/masthead.css" rel="stylesheet"/>
+    <link href="css/course.css" rel="stylesheet"/>
+    <link href="css/load-modal.css" rel="stylesheet"/>
+    <link href="css/content-index.css" rel="stylesheet"/>
+    <link href="css/load-modal.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="images/elecoder.ico">
+    <title>Bigademy - Learning Big Data made easy and interactive</title>
+    <meta name="description"
+          content="Bigademy - Learning Big Data made easy and interactive">
+</head>
+<body data-ng-controller="courseController">
+<div class="container-fluid">
+    <div class="row">
+        <div data-load-modal-control data-display-modal="displayModal"></div>
+    </div>
+    <div class="row">
+        <div data-masthead></div>
+    </div>
+
+    <div class="row image-row">
+        <div class="centered-image">
+            <img class="media-object" src="{{course.image}}" height="150px" width="150px">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="course-name">{{course.courseName}}</div>
+        <button type="button" class="start-button" data-ng-click="goToFirstExercise()">Start</button>
+    </div>
+
+    <div class="row">
+        <div class="container-fluid">
+            <div class="row nav-bar">
+                <div data-ng-if="!displayIntro">
+                    <div class="col-xs-6 nav-bar-col side-bar" data-ng-click="toggleDisplayIntro()">
+                        Introduction
+                    </div>
+                    <div class="col-xs-6 nav-bar-col-selected">
+                        Index
+                    </div>
+                </div>
+                <div data-ng-if="displayIntro">
+                    <div class="col-xs-6 nav-bar-col-selected side-bar">
+                        Introduction
+                    </div>
+                    <div class="col-xs-6 nav-bar-col" data-ng-click="toggleDisplayIntro()">
+                        Index
+                    </div>
+                </div>
+            </div>
+
+            <div class="row nav-bar-content">
+                <div class="col-xs-12">
+                    <!-- course intro -->
+                    <div class="course-text course-intro-body"
+                         data-ng-bind-html="getHtmlSafeString(course.explanation)" data-ng-if="displayIntro"></div>
+                    <div>
+                        <div class="row index-row" data-ng-if="!displayIntro">
+                            <div data-content-index data-course="course"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-resource.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-sanitize.min.js"></script>
+<script src="lib/angular/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="js/masthead.js"></script>
+<script src="js/content-index/ContentIndex.js"></script>
+<script src="js/content-index/directives/ContentIndexDirective.js"></script>
+<script src="js/load-modal/LoadModal.js"></script>
+<script src="js/load-modal/directives/LoadModalDirective.js"></script>
+<script src="js/course/Course.js"></script>
+<script src="js/course/controllers/CourseController.js"></script>
+</body>
+</html>

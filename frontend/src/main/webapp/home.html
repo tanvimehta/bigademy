@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="homeApp">
+<head>
+    <!-- Style sheet -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <link href="css/masthead.css" rel="stylesheet"/>
+    <link href="css/home.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="images/elecoder1.ico">
+    <title>Bigademy - Learning Big Data made easy and interactive</title>
+    <meta name="description"
+          content="Bigademy - Learning Big Data made easy and interactive">
+</head>
+<body ng-controller="homeController">
+<div class="container-fluid" data-ng-init="init()">
+    <!-- Header Row of the page-->
+    <div class="row">
+        <masthead/>
+    </div>
+
+    <div class="row">
+        <div class="intro">
+            <div class="col-xs-8 col-xs-offset-4">
+                <div class="intro-main-line">Learning Big Data made easy and interactive!</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div carousel interval="3000" class="slide-show">
+                <div slide data-ng-repeat="slide in slides">
+                    <img src="{{slide.image}}" height="1050px" width="1050px" style="margin: auto;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Panel for introduction. -->
+
+    <div class="row">
+        <!-- courses header -->
+        <div class="courses-header"><h2>Courses:</h2></div>
+        <!-- Display for each course -->
+        <div ng-repeat="course in courses">
+            <div class="col-xs-3">
+                <!-- Course Thumbnail -->
+                <div class="thumbnail thumbnail-style" ng-click="goToCourse(course.courseId)">
+                    <!-- course image -->
+                    <img src="{{course.image}}" class="image-size">
+                    <!-- Course Name -->
+                    <div class="caption">
+                        <h3 class="course-name">{{course.courseName}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-resource.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-sanitize.min.js"></script>
+<script src="js/masthead.js"></script>
+<script src="lib/angular/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

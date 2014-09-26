@@ -1,0 +1,56 @@
+.load-statements {
+    padding: 10px;
+    height: 10%;
+    font-size: 15px;
+    font-family:  'Cutive Mono', ;
+    border-left: 1px solid #ddd;
+    border-right: none;
+    overflow: auto;
+}
+
+.code-console {
+    padding: 10px;
+    height: 58%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    font-size: 14px;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    line-height: 1.8;
+    outline: none;
+    margin-bottom: 4px;
+    margin-right: 3px;
+    border-bottom: none;
+    border-top: none;
+    border-left: 1px solid #ddd;
+    border-right: none;
+}
+
+.code-cursor {
+    border: 1px solid #ddd;
+    display: inline;
+}
+
+.code-console-line-bar {
+    background-color: #f5f5f5;
+    width: 1%;
+    height: 68%;
+    font-size: 12;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    line-height: 1.8;
+    vertical-align: bottom;
+    border-left: 1px solid #ddd;
+}
+
+.code-console-line-bar-first-elem {
+    margin-top: 3px;
+}
+
+.output-console {
+    height: 30%;
+    width: 100%;
+    overflow: auto;
+    font-size: 120%;
+    margin-bottom: 0.4%;
+    font-family: "Andale Mono", AndaleMono, monospace;
+}

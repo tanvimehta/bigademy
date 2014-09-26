@@ -1,0 +1,27 @@
+<div class="content-main explanation-section-settings">
+    <div class="explanation-header">Description</div>
+
+    <div data-ng-bind-html="getHtmlSafeString(subtopic.explanation)"></div>
+    <br/>
+
+    <div data-ng-bind-html="getHtmlSafeString(exercise.explanation)"></div>
+    <br/>
+
+
+    <div class="explanation-header">Example</div>
+
+
+    <div data-ng-repeat="example in exercise.examples">
+        <div class="panel panel-default">
+            <div class="panel-heading example-panel-header" data-ng-bind-html="getHtmlSafeString(example.exampleName)"></div>
+            <div class="panel-body" data-ng-bind-html="getHtmlSafeString(example.example)"></div>
+        </div>
+    </div>
+
+    <!--<div data-ng-repeat="example in exercise.examples">-->
+        <!--<div class="explanation-panel" data-ng-bind-html="getHtmlSafeString(example.exampleName)"></div>-->
+        <!--<div class="explanation-panel" data-ng-bind-html="getHtmlSafeString(example.example)"></div>-->
+    <!--</div>-->
+
+
+</div>

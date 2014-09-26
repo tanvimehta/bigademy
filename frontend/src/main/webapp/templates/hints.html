@@ -1,0 +1,13 @@
+<div class="panel" data-ng-init="curPage=1">
+    <div class="row">
+        <div class="panel-body panel-body-settings"
+             data-ng-bind-html="getHtmlSafeString(exercise.hints[curPage-1].hint)">
+        </div>
+    </div>
+    <!-- Hint panel pagination -->
+    <div class="row text-center">
+        <pagination total-items="exercise.hints.length" page="curPage"
+                    max-size="3" items-per-page="1"
+                    class="pagination-sm pagination-cursor"></pagination>
+    </div>
+</div>

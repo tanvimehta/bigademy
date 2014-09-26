@@ -1,0 +1,41 @@
+<div class="col-xs-12">
+    <div class="row load-statements">
+        <span ng-bind-html="codeEditorModel.sce.trustAsHtml(formatLoadStatement(loadStatement))" />
+    </div>
+    <div class="row">
+        <textarea class="code-console" id="codeArea" ng-model="codeEditorModel.code" ng-keydown="handleKeyDown($event)"
+                  placeholder="Enter code here..."></textarea>
+    </div>
+    <div class="row">
+        <div class="panel panel-default output-console">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-9">
+                        Console
+                    </div>
+                    <!-- run button -->
+                    <div class="col-xs-3">
+                        <button type="button" class="btn pull-right btn-success" ng-click="runCode(codeEditorModel.code)"
+                                ng-if="!codeEditorModel.isCodeRunning && codeRunResult.success && !codeEditorModel.successFullRun">
+                            <i class="fa fa-play"></i> Run
+                        </button>
+                        <button type="button" class="btn pull-right btn-success" ng-click="runCode(codeEditorModel.code)"
+                                ng-if="!codeEditorModel.isCodeRunning && codeRunResult.success && codeEditorModel.successFullRun">
+                            <i class="fa fa-play"></i> Run (Success)
+                        </button>
+                        <button type="button" class="btn pull-right btn-danger"
+                                ng-click="runCode(codeEditorModel.code)"
+                                ng-if="!codeEditorModel.isCodeRunning && !codeRunResult.success">
+                            <i class="fa fa-play"></i> Run (Failed!)
+                        </button>
+                        <button type="button" class="btn btn-warning btn-processing pull-right" ng-if="codeEditorModel.isCodeRunning">
+                            <i class="fa fa-spinner fa-spin"></i> Running
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body" ng-class="textColor"
+                 ng-bind="codeEditorModel.sce.trustAsHtml(codeRunResult.errorMessage)"></div>
+        </div>
+    </div>
+</div>

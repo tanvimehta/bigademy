@@ -1,0 +1,71 @@
+<div class="content-main exercise-section-setting">
+    <div data-accordion close-others="false" class="col-xs-5 no-space-left problem-side-bar">
+        <div data-accordion-group is-open="true">
+            <div data-accordion-heading class="problem-side-bar-heading">
+                Problem
+            </div>
+            {{exercise.problem}}
+            <br/>
+            <br/>
+            <span data-ng-if="exercise.passToBackend">
+                Use
+                <span data-ng-if="exercise.outputDatasets.length==1">alias</span>
+                <span data-ng-if="exercise.outputDatasets.length!=1">aliases</span>
+                <b>
+                    <span data-ng-repeat="dataset in exercise.outputDatasets">
+                        <span data-ng-if="$index+1!=exercise.outputDatasets.length">
+                            {{dataset.alias}},
+                        </span>
+                        <span data-ng-if="$index+1==exercise.outputDatasets.length">
+                            {{dataset.alias}}
+                        </span>
+                    </span>
+                </b>
+                to store the output.
+            </span>
+        </div>
+        <div data-accordion-group>
+            <div data-accordion-heading>
+                Input
+            </div>
+            <div data-ng-repeat="dataset in exercise.inputDatasets" class="dataset-higlight">
+                <span class="dataset-formatting">{{dataset.alias}}</span>
+                <br/><br/>
+                <span data-ng-bind-html="getHtmlSafeString(getFormattedDataset(dataset.dataset))"></span>
+                <br/>
+            </div>
+        </div>
+        <div data-accordion-group>
+            <div data-accordion-heading>
+                Output
+            </div>
+            <div data-ng-repeat="dataset in exercise.outputDatasets" class="dataset-higlight">
+                <span class="dataset-formatting">{{dataset.alias}}</span>
+                <br/><br/>
+                <span data-ng-bind-html="getHtmlSafeString(getFormattedDataset(dataset.dataset))"></span>
+                <br/>
+            </div>
+        </div>
+        <div data-accordion-group>
+            <div data-accordion-heading>
+                Hint
+            </div>
+            <div data-hints data-exercise="exercise"></div>
+        </div>
+        <div data-accordion-group>
+            <div data-accordion-heading>
+                Solution
+            </div>
+            <div class="panel-body exercise-panel-body-settings"
+                 data-ng-bind-html="getHtmlSafeString(exercise.solution)"></div>
+        </div>
+    </div>
+    <div class="col-xs-7 no-space-left">
+        <div class="row">
+            <div data-code-editor data-is-exercise-clicked="isExerciseClicked"
+                 data-load-statement="exercise.loadStatement"
+                 data-pass-to-backend="exercise.passToBackend"
+                 data-exercise-id="exercise.exerciseId"></div>
+        </div>
+    </div>
+</div>

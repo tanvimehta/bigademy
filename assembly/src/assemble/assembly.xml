@@ -1,0 +1,63 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+    <id>bigamdey</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <baseDirectory>bigademy</baseDirectory>
+
+    <moduleSets>
+        <moduleSet>
+            <useAllReactorProjects>true</useAllReactorProjects>
+            <includes>
+                <include>com.bigademy:bigademy-dropwizard</include>
+            </includes>
+            <!-- Now, select which projects to include in this module-set. -->
+            <binaries>
+                <outputDirectory>bigademy-dropwizard/lib/</outputDirectory>
+                <unpack>false</unpack>
+                <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+            </binaries>
+
+            <sources>
+                <includeModuleDirectory>false</includeModuleDirectory>
+                <fileSets>
+                    <fileSet>
+                        <outputDirectory>bigademy-dropwizard/bin/</outputDirectory>
+                        <directory>src/main/scripts</directory>
+                        <fileMode>0755</fileMode>
+                    </fileSet>
+                    <fileSet>
+                        <outputDirectory>bigademy-dropwizard/config/</outputDirectory>
+                        <directory>src/main/resources</directory>
+                    </fileSet>
+                </fileSets>
+            </sources>
+        </moduleSet>
+        <moduleSet>
+            <useAllReactorProjects>true</useAllReactorProjects>
+            <includes>
+                <include>com.bigademy:bigademy-frontend</include>
+            </includes>
+            <!-- Now, select which projects to include in this module-set. -->
+            <binaries>
+                <outputDirectory>bigademy-frontend/lib/</outputDirectory>
+                <unpack>false</unpack>
+                <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+            </binaries>
+
+            <sources>
+                <includeModuleDirectory>false</includeModuleDirectory>
+                <fileSets>
+                    <fileSet>
+                        <outputDirectory>bigademy-frontend/config/</outputDirectory>
+                        <directory>src/main/resources</directory>
+                    </fileSet>
+                </fileSets>
+            </sources>
+        </moduleSet>
+    </moduleSets>
+</assembly>

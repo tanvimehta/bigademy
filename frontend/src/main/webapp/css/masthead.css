@@ -1,0 +1,111 @@
+.masthead {
+    background-color: #009b76;
+    text-align: center;
+    color: #ffffff;
+    height: 55px;
+    padding-top: 0.5%;
+    font-size: 22px;
+    text-align: center;
+    /*opacity: 0.8;*/
+}
+
+.website-name, .website-name:focus, .website-name:hover {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Stalemate', cursive;
+    font-size: 28px;
+}
+
+.sign-in-button-tab {
+    border-left: 1px solid #ddd;
+}
+
+.sign-in-button > a {
+    cursor: pointer;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.sign-in-button > a:hover, .sign-in-button > a:focus {
+    cursor: pointer;
+    color: #2C5197;
+    text-decoration: none;
+}
+
+.signed-in:hover, .signed-in:focus {
+    color: #2C5197;
+}
+
+.sign-in-modal-text-box-setting {
+    padding-bottom: 12px;
+}
+
+.cross-icon-setting > span {
+    cursor: pointer;
+}
+
+.cross-icon-setting > span:hover, .cross-icon-setting > span:focus {
+    cursor: pointer;
+}
+
+.cross-icon-setting > .fa-times-circle-o {
+    font-size: 32px !important;
+    padding-top: 12px;
+}
+
+.sign-in-container-setting {
+    text-align: center;
+    padding-bottom: 62px;
+}
+.profile-dropdown > li {
+    list-style: none;
+}
+
+.profile-dropdown >li > a {
+    cursor: pointer;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.profile-dropdown > li> a:hover, .profile-dropdown > li > a:focus {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.profile-dropdown > li > ul >li > a {
+    cursor: pointer;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.profile-dropdown > li > ul > li> a:hover, .profile-dropdown > li > ul > li > a:focus {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.course-nav-setting {
+    border-right: 1px solid #ddd;
+}
+
+.course-nav-setting > a {
+    cursor: pointer;
+    font-family: "Andale Mono", AndaleMono, monospace;
+
+    color: #ffffff;
+    font-weight: 400;
+
+}
+
+.course-nav-setting > a:hover, .course-nav-setting  > a:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2C5197;
+}

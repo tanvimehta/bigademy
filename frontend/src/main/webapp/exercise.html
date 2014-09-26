@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html data-ng-app="exerciseApp">
+<head>
+    <!-- Style sheet -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <link href="css/content-index.css" rel="stylesheet"/>
+    <link href="css/code-editor.css" rel="stylesheet"/>
+    <link href="css/masthead.css" rel="stylesheet"/>
+    <link href="css/load-modal.css" rel="stylesheet"/>
+    <link href="css/explanation.css" rel="stylesheet"/>
+    <link href="css/hints.css" rel="stylesheet"/>
+    <link href="css/problem-description.css" rel="stylesheet"/>
+    <link href="css/problem.css" rel="stylesheet"/>
+    <link href="css/exercise.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="images/elecoder.ico">
+    <title>Bigademy - Learning Big Data made easy and interactive</title>
+    <meta name="description"
+          content="Bigademy - Learning Big Data made easy and interactive">
+</head>
+
+<body>
+<div class="container-fluid" data-ng-controller="exerciseController">
+
+    <div class="row">
+        <div data-masthead data-course="course"></div>
+    </div>
+
+    <div class="row">
+        <div data-load-modal-control data-display-modal="displayModal"></div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-2 nav-side-bar ">
+            <div data-ng-switch="selectedSideNavBarOption">
+                <div data-ng-switch-when="explanation">
+                    <div class="selected-index-box">Explanation<i
+                            class="fa fa-angle-right pull-right arrow-font"></i></div>
+                    <div data-ng-click="changeSelectedNavBarOption('exercise')" class="index-box">Exercise<i
+                            class="fa fa-angle-right pull-right arrow-font"></i></div>
+                </div>
+                <div data-ng-switch-when="exercise">
+                    <div class="index-box" data-ng-click="changeSelectedNavBarOption('explanation')">Explanation<i
+                            class="fa fa-angle-right pull-right arrow-font"></i></div>
+                    <div class="selected-index-box">Exercise<i
+                            class="fa fa-angle-right pull-right arrow-font"></i></div>
+                </div>
+            </div>
+            <div data-ng-switch="showIndex" tabindex="-1" class="index-parent" data-ng-focus="indexToggle()"
+                 data-ng-blur="indexToggle()">
+                <div data-ng-switch-when="false" data-ng-click="indexToggle()" class="index-box">Index<i
+                        class="fa fa-angle-right pull-right arrow-font"></i></div>
+                <div data-ng-switch-when="true" data-ng-click="indexToggle()" class="selected-index-box">Index <i
+                        class="fa fa-angle-right pull-right arrow-font"></i></div>
+                <div class="index-setting" data-ng-if="showIndex">
+                    <div data-content-index data-course="course"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-10 main-panel no-space-left" data-ng-switch="selectedSideNavBarOption">
+            <div data-ng-switch-when="explanation" data-explanation data-subtopic="subTopic"
+                 data-exercise="exercise"></div>
+            <div data-ng-switch-when="exercise" data-problem data-course="course" data-exercise="exercise"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- scripts -->
+<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-resource.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-sanitize.min.js"></script>
+<script src="lib/angular/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="js/masthead.js"></script>
+<script src="js/exercise/Exercise.js"></script>
+<script src="js/exercise/controllers/ExerciseController.js"></script>
+<script src="js/content-index/ContentIndex.js"></script>
+<script src="js/content-index/directives/ContentIndexDirective.js"></script>
+<script src="js/code-editor/CodeEditor.js"></script>
+<script src="js/code-editor/directives/CodeEditorDirective.js"></script>
+<script src="js/load-modal/LoadModal.js"></script>
+<script src="js/load-modal/directives/LoadModalDirective.js"></script>
+<script src="js/explanation/Explanation.js"></script>
+<script src="js/explanation/directives/ExplanationDirective.js"></script>
+<script src="js/hints/Hints.js"></script>
+<script src="js/hints/directives/HintsDirective.js"></script>
+<script src="js/problem/Problem.js"></script>
+<script src="js/problem/directives/ProblemDirective.js"></script>
+</body>
+</html>

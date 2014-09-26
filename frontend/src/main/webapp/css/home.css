@@ -1,0 +1,76 @@
+body{
+    background-color: #FAFAFA;
+}
+
+.intro {
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 70px;
+    line-height: 1.2;
+}
+
+.slide-show {
+    background-color: rgba(43, 51, 54, 0.92);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.slide-show-text {
+    color: #333333;
+    font-size: 20px;
+}
+
+.intro-main-line {
+    font-size: 36px;
+    font-family: enriqueta, Garamond, serif;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+.intro-tag-line {
+    font-size: 20px;
+    font-family: enriqueta, Garamond, serif;
+    letter-spacing: 2.5px;
+    padding-left:  3%;
+}
+
+.courses-header {
+    font-size: 20px;
+    font-family: enriqueta, Garamond, serif;
+    letter-spacing: 2.5px;
+    padding-left:  3%;
+}
+
+.image-size {
+    height: 150px;
+    width: 150px;
+}
+
+.thumbnail-style {
+    cursor: pointer;
+    margin-left: 12%;
+    margin-top: 3%;
+    text-align: center;
+    border: 2px solid #ddd;
+    background-color: #FFFFFF;
+    opacity: 5.5;
+}
+
+.thumbnail-style:hover,.thumbnail-style:focus {
+    border: 2px solid #428bca;
+}
+
+.course-name {
+    font-family: enriqueta, Garamond, serif;
+    color: #428bca;
+}
+
+.carousel-indicators > li {
+    background-color: #fff;
+    border: 1px solid rgba(43, 51, 54, 0.92);
+}
+
+.carousel-indicators> .active{
+    background-color: rgba(43, 51, 54, 0.92);
+    border: 1px solid rgba(43, 51, 54, 0.92);
+}

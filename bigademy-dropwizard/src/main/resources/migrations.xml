@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="tmehta">
+
+        <createTable tableName="courses">
+            <column name="course_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="course_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="explanation" type="TEXT"/>
+            <column name="image" type="varchar(255)"/>
+        </createTable>
+
+        <createTable tableName="topics">
+            <column name="course_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="topic_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="explanation" type="varchar(255)"/>
+        </createTable>
+
+        <createTable tableName="subtopics">
+            <column name="topic_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="subtopic_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="subtopic_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="explanation" type="TEXT"/>
+        </createTable>
+
+        <createTable tableName="exercises">
+            <column name="subtopic_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exercise_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="exercise_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="explanation" type="TEXT"/>
+            <column name="problem" type="TEXT"/>
+            <column name="solution" type="varchar(255)"/>
+            <column name="load_statement" type="TEXT"/>
+            <column name="store_statement" type="varchar(255)"/>
+            <column name="pass_to_backend" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="input_datasets">
+            <column name="exercise_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="input_dataset_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="alias" type="varchar(255)"/>
+            <column name="dataset" type="TEXT"/>
+        </createTable>
+
+        <createTable tableName="output_datasets">
+            <column name="exercise_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="output_dataset_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="alias" type="varchar(255)"/>
+            <column name="dataset" type="TEXT"/>
+        </createTable>
+
+        <createTable tableName="hints">
+            <column name="exercise_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="hint_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="hint" type="TEXT"/>
+        </createTable>
+
+        <createTable tableName="examples">
+            <column name="exercise_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="example_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="example_name" type="TEXT"/>
+            <column name="example" type="TEXT"/>
+        </createTable>
+
+        <createTable tableName="users">
+            <column name="user_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(64)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="password" type="varchar(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="token" type="varchar(128)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="wait_list">
+            <column name="wait_list_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="email" type="varchar(64)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="reset_password_token">
+            <column name="reset_password_token_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="email" type="varchar(64)">
+                <constraints unique="false" nullable="false"/>
+            </column>
+            <column name="token" type="varchar(64)">
+                <constraints unique="false" nullable="false"/>
+            </column>
+        </createTable>
+        <insert tableName="users">
+            <column name="user_id">1</column>
+            <column name="name">Admin</column>
+            <column name="email">admin@bigademy.com</column>
+            <column name="password">617e5c233550bfb6da1c8c28d23cee6e</column>
+            <column name="token">619a9880-cc48-11e3-9c1a-0800200c9a66</column>
+        </insert>
+        <loadData encoding="UTF-8" file="exercises.csv" tableName="exercises"/>
+        <loadData encoding="UTF-8" file="subtopics.csv" tableName="subtopics"/>
+        <loadData encoding="UTF-8" file="courses.csv" tableName="courses"/>
+        <loadData encoding="UTF-8" file="topics.csv" tableName="topics"/>
+        <loadData encoding="UTF-8" file="hints.csv" tableName="hints"/>
+        <loadData encoding="UTF-8" file="examples.csv" tableName="examples"/>
+        <loadData encoding="UTF-8" file="input_datasets.csv"
+                  tableName="input_datasets"/>
+        <loadData encoding="UTF-8" file="output_datasets.csv"
+                  tableName="output_datasets"/>
+    </changeSet>
+</databaseChangeLog>
